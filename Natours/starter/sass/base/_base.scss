@@ -1,0 +1,17 @@
+/* Universal selector for reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* 
+  Box-sizing was hard-coded to "border-box" here, but since moved to 'body' 
+  This makes it easier for later changes and 3rd party stylesheets to modify it
+  Since box-sizing is not inheritable by default, we manually call it here
+  */
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}

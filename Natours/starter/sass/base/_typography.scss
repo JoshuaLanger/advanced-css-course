@@ -1,0 +1,42 @@
+/* Setting REM here */
+html {
+  /* 
+  A hard coded value prevents the browser from filling its own root value
+  By using an initial percentage, the browser (and thus the user) can easily set their own font size value
+  62.5% is derived from dividing 10px (what we want) by 16px (the default value)
+  */
+  font-size: 62.5%;
+}
+
+/* All font properties inherited from body */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* This prevents heading from shifting after animation */
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 0.7s ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 0.7s ease-out;
+  }
+}
