@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: $color-light-grey;
   margin: 0 auto;
 
   // The :not selector selects everything except the specified selector
@@ -11,9 +10,8 @@
   @include clearfix;
 
   // The brackets and regex syntax allows selecting a class partial
-  // In this case, we want all the classes that begin with "col-1"
+  // In this case, we want all the classes that begin with "col-"
   [class^='col-'] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
