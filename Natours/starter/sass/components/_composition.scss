@@ -25,14 +25,15 @@
     }
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       z-index: 20;
+      // Outline is like 'border', but with more properties like 'outline-offset'
       outline: 1.5rem solid $color-primary;
     }
+  }
 
-    &:not(:hover) {
-      transform: scale(0.95);
-    }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
   }
 }

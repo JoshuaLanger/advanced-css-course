@@ -16,3 +16,23 @@
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 }
+
+@mixin section-background-image($image-url) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url($image-url);
+  background-size: cover;
+}
+
+@mixin text-gradient {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
