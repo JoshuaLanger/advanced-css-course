@@ -167,6 +167,37 @@ body {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    font-size: 2rem;
+    height: 50rem;
+    color: #eef;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    backface-visibility: hidden;
+    transition: all 0.8s; }
+    .card__side--front {
+      background-color: #eef; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right, #ffb900, #ff7733); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right, #2998ff, #5643ff); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(360deg); }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -272,3 +303,8 @@ body {
   margin-top: -10rem; }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem; }
