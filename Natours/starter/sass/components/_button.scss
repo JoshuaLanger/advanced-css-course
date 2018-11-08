@@ -12,8 +12,7 @@
   }
 
   &:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    @include button-hover-effect;
 
     &::after {
       transform: scale(1.6);
@@ -22,8 +21,7 @@
   }
 
   &:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    @include button-active-effect;
   }
 
   &::after {
@@ -50,5 +48,29 @@
 
   &--animated {
     animation: moveUp 0.5s cubic-bezier(0.17, 0.67, 0.51, 1.46) 0.75s backwards;
+  }
+}
+
+.btn-text {
+  transition: all 0.2s;
+
+  &:link,
+  &:visited {
+    font-size: $font-size-default;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    @include button-hover-effect;
+  }
+
+  &:active {
+    @include button-active-effect;
   }
 }
