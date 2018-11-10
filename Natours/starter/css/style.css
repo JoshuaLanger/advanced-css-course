@@ -102,6 +102,18 @@ body {
 .u-center-text {
   text-align: center; }
 
+.u-margin-top-small {
+  margin-top: 1.5rem; }
+
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
+.u-margin-top-large {
+  margin-top: 8rem; }
+
+.u-margin-top-x-large {
+  margin-top: 10rem; }
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
@@ -110,6 +122,9 @@ body {
 
 .u-margin-bottom-large {
   margin-bottom: 8rem; }
+
+.u-margin-bottom-x-large {
+  margin-bottom: 10rem; }
 
 .btn {
   /* Both link and visited pseudo-classes will have the same style */ }
@@ -146,6 +161,11 @@ body {
     color: #777; }
     .btn--white::after {
       background-color: #eef; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #eef; }
+    .btn--green::after {
+      background-color: #55c57a; }
   .btn--animated {
     animation: moveUp 0.5s cubic-bezier(0.17, 0.67, 0.51, 1.46) 0.75s backwards; }
 
@@ -204,9 +224,9 @@ body {
     .card__picture--1 {
       background-image: linear-gradient(to right, #ffb900, #ff7733), url("../img/nat-5.jpg"); }
     .card__picture--2 {
-      background-image: url("../img/nat-5.jpg"); }
+      background-image: linear-gradient(to right, #7ed56f, #28b485), url("../img/nat-6.jpg"); }
     .card__picture--3 {
-      background-image: url("../img/nat-5.jpg"); }
+      background-image: linear-gradient(to right, #2998ff, #5643ff), url("../img/nat-7.jpg"); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -216,13 +236,17 @@ body {
     position: absolute;
     top: 12rem;
     right: 2rem;
-    width: 75%; }
+    width: 60%; }
   .card__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 51, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 255, 0.85)); }
   .card__details {
     color: #000;
     padding: 3rem; }
@@ -236,6 +260,23 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #ddd; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #eef;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }

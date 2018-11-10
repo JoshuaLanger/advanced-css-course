@@ -46,6 +46,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &--animated {
     animation: moveUp 0.5s cubic-bezier(0.17, 0.67, 0.51, 1.46) 0.75s backwards;
   }
