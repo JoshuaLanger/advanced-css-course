@@ -126,6 +126,20 @@ body {
 .u-margin-bottom-x-large {
   margin-bottom: 10rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .btn {
   /* Both link and visited pseudo-classes will have the same style */ }
   .btn:link, .btn:visited {
@@ -326,7 +340,7 @@ body {
   width: 75%;
   margin: 0 auto;
   padding-left: 9rem;
-  background-color: #eef;
+  background-color: rgba(238, 238, 255, 0.6);
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   padding: 6rem;
@@ -432,9 +446,9 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
 
 .section-stories {
-  padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative;
+  padding: 15rem 0; }
