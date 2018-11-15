@@ -1,5 +1,6 @@
 .btn {
   /* Both link and visited pseudo-classes will have the same style */
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -9,6 +10,7 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
+    border: none;
   }
 
   &:hover {
@@ -20,7 +22,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     @include button-active-effect;
   }
 
