@@ -1,8 +1,17 @@
 .navigation {
   &__checkbox {
+    display: none;
   }
 
   &__button {
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 2000;
   }
 
   &__background {
@@ -17,16 +26,29 @@
     top: 6.5rem;
     right: 6.5rem;
     z-index: 1000;
+    // remove this later
+    transform: scale(120);
   }
   &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    right: 0;
   }
-
   &__list {
+    @include center-content;
+    list-style: none;
   }
-
   &__item {
+    margin: 1rem;
   }
-
   &__link {
+    font-size: 3rem;
+    font-weight: 300;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }
