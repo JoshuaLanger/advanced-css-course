@@ -42,3 +42,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin hyphens-polyfill($arg) {
+  hyphens: $arg;
+  -moz-hyphens: $arg;
+  -ms-hyphens: $arg;
+  -webkit-hyphens: $arg;
+}
