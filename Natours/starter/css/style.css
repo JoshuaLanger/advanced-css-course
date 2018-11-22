@@ -1,9 +1,8 @@
 /*
-small:        0-600px
-medium:       600-900px
-large:        900-1200px
-default:      1200-1800px
-extra-large:  1800px+
+Media queries are not affected by our rem value of 10px.
+Instead, we use 'em', which is 16px.
+The widths are defined by 'px'/16px to get the em value
+e.g. for the small breakpoint, 600px/16px = 37.5 em
 */
 @keyframes moveInLeft {
   0% {
@@ -53,6 +52,18 @@ html {
   62.5% is derived from dividing 10px (what we want) by 16px (the default value)
   */
   font-size: 62.5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 70%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 /* All font properties inherited from body */
 body {

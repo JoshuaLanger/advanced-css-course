@@ -6,6 +6,21 @@ html {
   62.5% is derived from dividing 10px (what we want) by 16px (the default value)
   */
   font-size: 62.5%;
+
+  // the four breakpoint values are sm, md, lg, and xl
+
+  @include respond(xl) {
+    font-size: 80%;
+  }
+  @include respond(lg) {
+    font-size: 70%;
+  }
+  @include respond(md) {
+    font-size: 60%;
+  }
+  @include respond(sm) {
+    font-size: 50%;
+  }
 }
 
 /* All font properties inherited from body */
