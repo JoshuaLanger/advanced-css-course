@@ -1,3 +1,10 @@
+/*
+small:        0-600px
+medium:       600-900px
+large:        900-1200px
+default:      1200-1800px
+extra-large:  1800px+
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;

@@ -1,3 +1,32 @@
+// Media Query Manager
+/*
+small:        0-600px
+medium:       600-900px
+large:        900-1200px
+default:      1200-1800px
+extra-large:  1800px+
+*/
+@mixin respond-sm {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin respond-md {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin respond-lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin respond-xl {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
 // The clearfix mixin restores height to floated elements
 @mixin clearfix {
   &::after {
