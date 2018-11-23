@@ -5,9 +5,16 @@
   // The :not selector selects everything except the specified selector
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(md) {
+      margin-bottom: $gutter-vertical-md;
+    }
   }
 
   @include clearfix;
+  @include respond(md) {
+    max-width: 80%;
+  }
 
   // The brackets and regex syntax allows selecting a class partial
   // In this case, we want all the classes that begin with "col-"
@@ -16,6 +23,16 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(md) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-md;
+      }
+    }
+
+    @include respond(md) {
+      width: 100% !important;
+      padding: 0 3rem;
     }
   }
 
