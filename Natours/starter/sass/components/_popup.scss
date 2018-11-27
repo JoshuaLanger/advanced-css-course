@@ -12,7 +12,6 @@
 
   &__content {
     width: 70vw;
-    height: 50vh;
     @include center-content;
     background-color: $color-white;
     border-radius: 3px;
@@ -22,6 +21,10 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.2);
     transition: all 0.5s 0.2s;
+
+    @include respond(lg) {
+      height: 10vh;
+    }
   }
 
   &__left {

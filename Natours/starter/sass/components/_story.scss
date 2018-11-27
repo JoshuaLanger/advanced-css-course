@@ -9,8 +9,22 @@
   font-size: $font-size-default;
   transform: skewX(-12deg);
 
+  @include respond(md) {
+    width: 100%;
+    padding-left: 7rem;
+    padding: 4rem;
+  }
+
+  @include respond(sm) {
+    transform: skewX(0);
+  }
+
   & > * {
     transform: skewX(12deg);
+
+    @include respond(sm) {
+      transform: skewX(0);
+    }
   }
 
   &__shape {
@@ -23,6 +37,10 @@
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     transform: translate(-3rem, -1.4rem) skewX(12deg);
+
+    @include respond(sm) {
+      transform: translate(-3rem, -1.4rem) skewX(0);
+    }
   }
 
   &__img {
