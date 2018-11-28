@@ -407,11 +407,20 @@
 
       <footer class="footer">
         <div class="footer__logo-box">
-          <img
-            src="img/logo-green-2x.png"
-            alt="Full logo"
-            class="footer__logo"
-          />
+          <picture class="footer__logo">
+            <source
+              media="(max-width: 37.5em)"
+              srcset="
+                img/logo-green-small-1x.png 1x,
+                img/logo-green-small-2x.png 2x
+              "
+            />
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="Full logo"
+              class="footer__logo"
+            />
+          </picture>
         </div>
         <div class="row">
           <div class="col-1-of-2">
@@ -472,20 +481,6 @@
               aut, natus, voluptatem atque debitis! Obcaecati, quo aspernatur!
               Consequuntur temporibus laborum illum, eius laudantium velit
               sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ratione ab voluptatibus libero dignissimos consequatur ducimus,
-              commodi labore officiis itaque velit, iusto ut et sapiente quia?
-              Aliquam quis iste fuga architecto.Molestias dignissimos odit fuga,
-              autem reprehenderit quaerat quam architecto ex nulla, commodi ad
-              accusantium, laboriosam cum. Architecto modi quia vero quod
-              molestiae. Pariatur vero at obcaecati suscipit ab accusantium
-              tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis obcaecati similique corrupti accusantium officia.
-              Recusandae, placeat quidem eaque, ratione omnis animi, quod ab ad
-              dolorem et eveniet pariatur! Officia, quidem.Placeat explicabo
-              blanditiis ab consequuntur, excepturi temporibus natus a, unde
-              cumque quod dolore quam omnis amet aspernatur praesentium quisquam
-              odio cupiditate, officiis neque voluptate. Voluptatibus architecto
-              sequi vero ullam? Asperiores!
             </p>
             <a href="#" class="btn btn--green">Book now</a>
           </div>
