@@ -1,6 +1,9 @@
 .header {
   height: 95vh;
-  @include section-background-image('../img/hero.jpg');
+  @include section-background-image('../img/hero-small.jpg');
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    @include section-background-image('../img/hero.jpg');
+  }
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
