@@ -30,13 +30,18 @@
   &__shape {
     height: 15rem;
     width: 15rem;
-    float: left;
     position: relative;
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
+    float: left;
     transform: translate(-3rem, -1.4rem) skewX(12deg);
+    overflow: hidden;
+    border-radius: 50%;
+    
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+    }
 
     @include respond(sm) {
       transform: translate(-3rem, -1.4rem) skewX(0);
