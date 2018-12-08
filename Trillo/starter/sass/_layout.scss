@@ -17,11 +17,17 @@
 
 .content {
   display: flex;
+
+  // TODO: remove following lines before production build
+  height: 80rem;
 }
 
 .sidebar {
   background-color: $color-grey-dark-1;
+  display: flex;
   flex: 0 0 18%; // Exactly 18% of parent width
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {

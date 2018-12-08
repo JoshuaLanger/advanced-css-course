@@ -103,3 +103,18 @@
     border-radius: 50%;
   }
 }
+
+.side-nav {
+  list-style: none;
+
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
