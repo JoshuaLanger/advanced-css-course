@@ -105,16 +105,54 @@
 }
 
 .side-nav {
+  font-size: 1.4rem;
   list-style: none;
+  margin-top: 3.5rem;
 
   &__item {
+    position: relative;
   }
 
-  &__link {
+  &__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: $color-primary;
+    transform: scaleY(0);
+    transition: transform 0.1s,
+      width 0.2s 0.1s cubic-bezier(1, 0.05, 0.45, 0.95), background-color 0.1s;
+  }
+
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background-color: $color-primary-light;
+  }
+
+  &__link:link,
+  &__link:visited {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 1.5rem 3rem;
+    color: $color-grey-light-1;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; // Uses the parent element's color
   }
 }
