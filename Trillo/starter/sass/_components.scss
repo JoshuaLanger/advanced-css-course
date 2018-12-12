@@ -156,3 +156,47 @@
     fill: currentColor; // Uses the parent element's color
   }
 }
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+
+  &__heading {
+
+  }
+
+  &__stars {
+    margin-right: auto; // Takes all available space w/o expanding content width
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: $color-primary;
+  }
+
+  &__location {
+
+  }
+
+  &__rating {
+
+
+    &-average {
+
+    }
+
+    &-count {
+
+    }
+  }
+}
