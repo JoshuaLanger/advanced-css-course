@@ -235,8 +235,17 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  span {
+    margin-left: 3px;
+    transition: margin-left .2s;
+  }
+
   &:hover {
     color: $color-grey-dark-1;
+
+    span {
+      margin-left: 8px;
+    }
   }
 
   &:focus {
@@ -302,6 +311,63 @@
     &:not(:last-child) {
       margin-right: -1.5rem;
     }
+  }
+}
+
+.review {
+  position: relative;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  background-color: #fff;
+  box-shadow: $shadow-light;
+  overflow: hidden;
+
+  &::before {
+    content: '\201C'; // Left quotation mark
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    font-family: sans-serif;
+    color: $color-grey-light-2;
+  }
+
+  &__text {
+    margin-bottom: 3rem;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-box {
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+
+  &__user-name {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__user-date {
+    font-size: 1.1rem;
+    color: $color-grey-dark-3;
+  }
+
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+  }
+
+  &__rating {
+    font-size: 2rem;
+    color: $color-primary;
   }
 }
 
