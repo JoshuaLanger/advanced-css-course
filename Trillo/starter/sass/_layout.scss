@@ -1,7 +1,7 @@
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: $color-grey-light-1;
+  background-color: #fff;
   box-shadow: 0 2rem 6rem rgba($color-grey-dark-1, 0.3);
 }
 
@@ -17,9 +17,6 @@
 
 .content {
   display: flex;
-
-  // TODO: remove following lines before production build
-  height: 80rem;
 }
 
 .sidebar {
@@ -32,4 +29,24 @@
 
 .hotel-view {
   flex: 1; // Grow as much as it can
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: $color-grey-light-1;
+}
+
+.description {
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  padding: 3rem;
+  background-color: #fff;
+  font-size: 1.4rem;
+  box-shadow: $shadow-light;
+}
+
+.user-reviews {
+  flex: 1;
+  background-color: #fff;
 }
