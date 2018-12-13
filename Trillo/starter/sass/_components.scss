@@ -168,35 +168,94 @@
 
 .overview {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
   &__heading {
-
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
   }
 
   &__stars {
     margin-right: auto; // Takes all available space w/o expanding content width
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
     fill: $color-primary;
+
+    &-location {
+      margin-right: 0.5rem;
+    }
   }
 
   &__location {
-
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
   }
 
   &__rating {
-
+    padding: 0 2.25rem;
+    margin-left: 3rem;
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
 
     &-average {
-
+      font-size: 2.25rem;
+      font-weight: 300;
     }
 
     &-count {
-
+      margin-bottom: -3px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
     }
+  }
+}
+
+.btn-inline {
+  display: inline-block;
+  padding-bottom: 2px;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  background-color: transparent;
+  color: $color-primary;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $color-grey-dark-1;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba($color-grey-dark-1, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
   }
 }
