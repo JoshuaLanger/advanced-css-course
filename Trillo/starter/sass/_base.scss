@@ -12,6 +12,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 62.5% = 10px (desired) / 16px (standard)
+
+  @media only screen and (max-width: $md) {
+    font-size: 50%;
+  }
 }
 
 body {

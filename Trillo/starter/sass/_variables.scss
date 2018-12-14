@@ -14,3 +14,10 @@ $color-grey-dark-3: #999;
 $shadow-light: 0 2rem 5rem rgba($color-grey-dark-1, 0.06);
 
 $line: 1px solid $color-grey-light-1;
+
+// Breakpoints
+$lg: 75em;      // 1200px
+$md: 68.75em;   // 1100px
+$sm: 56.25em;   // 900px
+$xs: 37.5em;    // 600px
+$xxs: 31.25em;  // 500px
