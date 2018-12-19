@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #6d5d4b;
+  font-weight: 300; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); }
+
+.sidebar {
+  background-color: #c69963; }
+
+.realtors {
+  background-color: #101d2c; }
+
+.story__content {
+  background-color: #f9f7f6; }
+
+.footer {
+  background-color: #101d2c; }
