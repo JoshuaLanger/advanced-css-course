@@ -31,8 +31,20 @@
   }
 
   &__content {
-    background-color: $color-grey-light-2;
+    padding: 6rem 8vw;
+    background-color: $color-grey-light-1;
     grid-column: col-start 5 / full-end;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+    font-style: italic;
   }
 }
 
