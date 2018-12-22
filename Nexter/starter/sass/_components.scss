@@ -1,3 +1,30 @@
+.nav-btn {
+  width: 4.5rem;
+  height: 2px;
+  border: none;
+  border-radius: 0;
+  margin-top: 4rem;
+  background-color: #fff;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 4.5rem;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+
+  &::after {
+    transform: translateY(1.3rem);
+  }
+}
+
 .feature {
   display: grid;
   grid-template-columns: min-content 1fr;
