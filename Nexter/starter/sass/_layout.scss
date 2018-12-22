@@ -160,6 +160,14 @@
 }
 
 .footer {
+  padding: 8rem;
   background-color: $color-secondary;
   grid-column: full-start / full-end;
+}
+
+.copyright {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: $color-grey-light-2;
 }
