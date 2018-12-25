@@ -33,6 +33,14 @@
   grid-row-gap: 1.5rem;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-md) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    padding: 5rem;
+  }
+
   &__logo {
     height: 3rem;
     justify-self: center;
@@ -84,6 +92,10 @@
   justify-content: center;
   justify-items: center;
 
+  @media only screen and (max-width: $bp-md) {
+    grid-column: full-start / full-end;
+  }
+
   &__list {
     padding: 3rem;
     display: grid;
@@ -91,6 +103,15 @@
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
     align-items: center;
+
+    @media only screen and (max-width: $bp-md) {
+      grid-column: full-start / full-end;
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
@@ -120,6 +141,7 @@
   &__pictures {
     background-color: $color-primary;
     grid-column: full-start / col-end 4;
+    background-size: cover;
     background-image: linear-gradient(
         rgba($color-primary-dark, 0.5),
         rgba($color-primary, 0.5)
@@ -130,6 +152,11 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
+
+    @media only screen and (max-width: $bp-md) {
+      padding: 6rem;
+      grid-column: full-start / full-end;
+    }
   }
 
   &__img--1 {
@@ -137,6 +164,12 @@
     grid-column: 2 / -2;
     grid-row: 2 / -2;
     box-shadow: 0 2rem 6rem rgba(#000, 0.1);
+
+    @media only screen and (max-width: $bp-md) {
+      width: 100%;
+      grid-column: 1 / 5;
+      grid-row: 1 / -1;
+    }
   }
 
   &__img--2 {
@@ -145,6 +178,11 @@
     grid-column: 4 / 7;
     grid-row: 4 / 6;
     box-shadow: 0 2rem 6rem rgba(#000, 0.2);
+
+    @media only screen and (max-width: $bp-md) {
+      width: 100%;
+      grid-row: 1 / -1;
+    }
   }
 
   &__content {
@@ -156,6 +194,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @media only screen and (max-width: $bp-md) {
+      grid-column: full-start / full-end;
+      grid-row: 5 / 6;
+    }
   }
 
   &__text {
